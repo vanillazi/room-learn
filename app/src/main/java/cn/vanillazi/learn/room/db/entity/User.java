@@ -1,5 +1,6 @@
 package cn.vanillazi.learn.room.db.entity;
 
+import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
@@ -12,7 +13,9 @@ public class User {
     private String homePage;
     private Integer age;
 
+    @ColumnInfo(name = "father_name")
     private String fatherName;
+    @ColumnInfo(name = "mother_name")
     private String motherName;
 
     public void setMotherName(String motherName) {
