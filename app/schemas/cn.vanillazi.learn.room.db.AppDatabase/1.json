@@ -2,11 +2,11 @@
   "formatVersion": 1,
   "database": {
     "version": 1,
-    "identityHash": "16f4cc6dd58b77c24f163de2bbec29df",
+    "identityHash": "ff4f39d7366f8fe0852f0c3e6a75c450",
     "entities": [
       {
         "tableName": "User",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`name` TEXT, `id` INTEGER PRIMARY KEY AUTOINCREMENT, `homePage` TEXT, `age` INTEGER)",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`name` TEXT, `id` INTEGER PRIMARY KEY AUTOINCREMENT, `homePage` TEXT, `age` INTEGER, `fatherName` TEXT)",
         "fields": [
           {
             "fieldPath": "name",
@@ -31,6 +31,12 @@
             "columnName": "age",
             "affinity": "INTEGER",
             "notNull": false
+          },
+          {
+            "fieldPath": "fatherName",
+            "columnName": "fatherName",
+            "affinity": "TEXT",
+            "notNull": false
           }
         ],
         "primaryKey": {
@@ -46,7 +52,7 @@
     "views": [],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '16f4cc6dd58b77c24f163de2bbec29df')"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'ff4f39d7366f8fe0852f0c3e6a75c450')"
     ]
   }
 }

@@ -12,6 +12,25 @@ public class User {
     private String homePage;
     private Integer age;
 
+    private String fatherName;
+    private String motherName;
+
+    public void setMotherName(String motherName) {
+        this.motherName = motherName;
+    }
+
+    public String getMotherName() {
+        return motherName;
+    }
+
+    public void setFatherName(String fatherName) {
+        this.fatherName = fatherName;
+    }
+
+    public String getFatherName() {
+        return fatherName;
+    }
+
     public String getName() {
         return name;
     }
